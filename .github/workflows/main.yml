@@ -1,31 +1,32 @@
-name: Run Soul Workflow
+name: Run soul Workflow
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '*/90 * * * *'
+    - cron: '*/99 * * * *'
 
- jobs:
+jobs:
   run_soul_workflow:
-     runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: binary by @soulcracks
-        run: chmod +x soulcracks
+      - name: binary by @sharp
+        run: chmod +x soul
+        
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
           python-version: '3.x'
 
       - name: Install required packages
-        run: |
-          pip install telebot pymongo aiohttp
+        run: | 
+          pip install telebot pymongo aiohttp psutil
 
-      - name: Run soul.py
-        run: python3 soul.py
+      - name: Run soul
+        run: python3 soul
         
