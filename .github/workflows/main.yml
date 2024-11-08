@@ -15,8 +15,8 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: binary by @sharp
-        run: chmod +x soul
+      - name: binary by @soulcracks
+        run: chmod +x soulcracks
         
       - name: Set up Python
         uses: actions/setup-python@v3
