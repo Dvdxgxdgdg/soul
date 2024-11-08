@@ -28,5 +28,5 @@ jobs:
           pip install telebot pymongo aiohttp psutil
 
       - name: Run soul
-        run: python3 soul
+        run: python3 soul.py
         
